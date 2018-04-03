@@ -37,11 +37,11 @@ namespace LazyResettable
                         Console.WriteLine("Data1 retrieved");
                         Console.WriteLine("Data2 retrieved");
 
-                        if (currentIteration % 8 == 0)
+                        if (currentIteration % 8 == 0 && fileProvider is IResettable)
                         {
                             Console.WriteLine("Data Reset");
 
-                            fileProvider.Reset();
+                            ((IResettable)fileProvider).Reset();
                         }
 
                     }, i);
@@ -68,11 +68,12 @@ namespace LazyResettable
                     Console.WriteLine("Data1 retrieved");
                     Console.WriteLine("Data2 retrieved");
 
-                    if (i % 8 == 0)
+                    if (i % 8 == 0 && fileProvider is IResettable)
                     {
                         Console.WriteLine("Data Reset");
 
-                        fileProvider.Reset();
+                        ((IResettable)fileProvider).Reset();
+
                     }
                 }
 

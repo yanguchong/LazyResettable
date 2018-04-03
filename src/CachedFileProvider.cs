@@ -2,7 +2,7 @@
 
 namespace LazyResettable
 {
-    internal sealed class CachedFileProvider : FileProviderBase, IFileProvider
+    internal sealed class CachedFileProvider : FileProviderBase, IFileProvider, IResettable
     {
         private LazyResettable<List<Data1>> _data1;
         private LazyResettable<List<Data2>> _data2;

@@ -2,7 +2,7 @@
 
 namespace LazyResettable
 {
-    internal interface IFileProvider : IResettable
+    internal interface IFileProvider
     {
         List<Data1> GetData1();
         List<Data2> GetData2();
