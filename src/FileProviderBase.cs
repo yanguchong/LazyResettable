@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace LazyResettable
@@ -22,7 +23,9 @@ namespace LazyResettable
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
-
+#if DEBUG
+                    Debugger.Break();
+#endif
                     throw;
                 }
             }           
@@ -43,6 +46,11 @@ namespace LazyResettable
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
+
+#if DEBUG
+                    Debugger.Break();
+#endif
+
 
                     throw;
                 }

@@ -62,6 +62,10 @@ namespace LazyResettable
 
                 _refreshCount++;
 
+#if DEBUG
+                Console.WriteLine("Refresh Count: " + _refreshCount);
+#endif
+
                 //return data
                 return _data;
             }
